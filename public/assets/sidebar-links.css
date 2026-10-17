@@ -1,0 +1,25 @@
+.sidebar__link,
+.sidebar__link:hover,
+.sidebar__link:focus,
+.sidebar__link:active {
+    text-decoration: none !important;
+}
+.sidebar__link {
+    display: flex;
+    height: 44px;
+    align-items: center;
+    gap: 0.75rem;
+    outline: 2px solid transparent;
+    border-radius: inherit;
+    padding: 0 0.75rem;
+    position: relative;
+    transition: all 0.2s ease-out;
+}
+
+.sidebar__link .text {
+    text-decoration: none;
+}
+
+.sidebar__link:hover .text {
+    text-decoration: none;
+}

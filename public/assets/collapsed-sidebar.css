@@ -1,0 +1,86 @@
+/* Collapsed Sidebar Styles */
+.vertical-sidebar .checkbox-input:not(:checked) ~ .sidebar {
+    width: var(--sidebar-collapsed);
+}
+.vertical-sidebar .checkbox-input:not(:checked) ~ .sidebar .sidebar__logo-text {
+    display: none;
+}
+.vertical-sidebar .checkbox-input:not(:checked) ~ .sidebar .sidebar__logo img {
+    width: 36px;
+    height: 36px;
+}
+
+.vertical-sidebar .checkbox-input:not(:checked) ~ .sidebar .text,
+.vertical-sidebar .checkbox-input:not(:checked) ~ .sidebar .sidebar__section-label,
+.vertical-sidebar .checkbox-input:not(:checked) ~ .sidebar .sidebar__item--heading {
+    display: none;
+}
+
+.vertical-sidebar .checkbox-input:not(:checked) ~ .sidebar .sidebar__link {
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.vertical-sidebar .checkbox-input:not(:checked) ~ .sidebar .icon {
+    min-width: 44px;
+    height: 44px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vertical-sidebar .checkbox-input:not(:checked) ~ .sidebar .icon svg,
+.vertical-sidebar .checkbox-input:not(:checked) ~ .sidebar .icon .icon-svg {
+    width: 24px;
+    height: 24px;
+    fill: #FFFFFF;
+    color: #FFFFFF;
+}
+
+.vertical-sidebar .checkbox-input:not(:checked) ~ .sidebar .icon svg *,
+.vertical-sidebar .checkbox-input:not(:checked) ~ .sidebar .icon .icon-svg * {
+    fill: currentColor;
+    opacity: 1;
+}
+
+.vertical-sidebar .checkbox-input:not(:checked) ~ .sidebar .sidebar__link:hover {
+    background: rgba(255,255,255,0.10);
+    border-radius: var(--radius-md);
+}
+
+.vertical-sidebar .checkbox-input:not(:checked) ~ .sidebar .sidebar__link.active .icon svg,
+.vertical-sidebar .checkbox-input:not(:checked) ~ .sidebar .sidebar__link.active .icon .icon-svg {
+    fill: var(--teal-light);
+    color: var(--teal-light);
+}
+
+.vertical-sidebar .checkbox-input:not(:checked) ~ .sidebar .toggle--close,
+.vertical-sidebar .checkbox-input:checked ~ .sidebar .toggle--open {
+    opacity: 0;
+    transform: rotate(90deg);
+}
+
+.sidebar-tooltip {
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #fff;
+    background: #0D2B55;
+    padding: 8px 12px;
+    border-radius: 6px;
+    box-shadow: 0 8px 20px rgba(13,43,85,0.45);
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.sidebar-tooltip::after {
+    content: '';
+    position: absolute;
+    left: -5px;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    width: 10px;
+    height: 10px;
+    background: inherit;
+}
